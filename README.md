@@ -70,37 +70,37 @@ This project was built entirely on the frontend to focus on UI/UX, component str
 
 ### Viewer Dashboard Transactions
 <div align="center">
-  <img alt="Viewer Dashboard Transactions" src="./screenshots/viewer_dashboard_transactions.jpg" width="700"/>
+  <img alt="Viewer Dashboard Transactions" src="./src/screenshots/viewer_dashboard_transactions.jpg" width="700"/>
 </div>
 
 ### Admin Dashboard Transactions
 <div align="center">
-  <img alt="Admin Dashboard Transactions" src="./screenshots/admin_dashboard_transactions.jpg" width="700"/>
+  <img alt="Admin Dashboard Transactions" src="./src/screenshots/admin_dashboard_transactions.jpg" width="700"/>
 </div>
 
 ### Transactions
 <div align="center">
-  <img alt="Transactions" src="./screenshots/transactions.jpg" width="700"/>
+  <img alt="Transactions" src="./src/screenshots/transactions.jpg" width="700"/>
 </div>
 
 ### Admin Settings
 <div align="center">
-  <img alt="Admin Settings" src="./screenshots/admin_settings.jpg" width="700"/>
+  <img alt="Admin Settings" src="./src/screenshots/admin_settings.jpg" width="700"/>
 </div>
 
 ### Viewer Settings
 <div align="center">
-  <img alt="Viewer Settings" src="./screenshots/viewer_settings.jpg" width="700"/>
+  <img alt="Viewer Settings" src="./src/screenshots/viewer_settings.jpg" width="700"/>
 </div>
 
 ### Dark Mode Dashboard - 1
 <div align="center">
-  <img alt="Dark Mode Dashboard - 1" src="./screenshots/darkmode_dashboard_1.jpg" width="700"/>
+  <img alt="Dark Mode Dashboard - 1" src="./src/screenshots/darkmode_dashboard_1.jpg" width="700"/>
 </div>
 
 ### Dark Mode Dashboard - 2
 <div align="center">
-  <img alt="Dark Mode Dashboard - 2" src="./screenshots/darkmode_dashboard_2.jpg" width="700"/>
+  <img alt="Dark Mode Dashboard - 2" src="./src/screenshots/darkmode_dashboard_2.jpg" width="700"/>
 </div>
 
 ---
