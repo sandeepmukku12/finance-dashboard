@@ -97,12 +97,24 @@ export default function Layout({ children, activeTab, setActiveTab }) {
             </select>
           </div>
 
-          <button
-            onClick={() => setDark(!dark)}
-            className="w-full flex items-center justify-center gap-2 text-sm px-4 py-2.5 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg font-medium transition-colors"
-          >
-            {dark ? '☀️ Light Mode' : '🌙 Dark Mode'}
-          </button>
+          {/* Dark Mode Slider Toggle */}
+          <div className="flex items-center justify-between px-4 py-2.5 bg-gray-100 dark:bg-gray-800 rounded-lg">
+            <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+              {dark ? '🌙 Dark Mode' : '☀️ Light Mode'}
+            </span>
+            <button
+              onClick={() => setDark(!dark)}
+              className={`relative inline-flex h-6 w-11 shrink-0 cursor-pointer items-center rounded-full transition-colors duration-300 ease-in-out focus:outline-none ${
+                dark ? 'bg-blue-600' : 'bg-gray-300'
+              }`}
+            >
+              <span
+                className={`inline-block h-4 w-4 transform rounded-full bg-white transition duration-300 ease-in-out shadow-sm ${
+                  dark ? 'translate-x-6' : 'translate-x-1'
+                }`}
+              />
+            </button>
+          </div>
         </div>
       </aside>
 
