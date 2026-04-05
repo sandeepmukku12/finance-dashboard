@@ -92,6 +92,13 @@ npm run dev
 
 ---
 
+### ✅ Notes
+
+- Open your browser and navigate to `http://localhost:5173` (or the port Vite provides) to view the app.
+- Because this app relies entirely on Local Storage, there is **no backend setup required**. It works right out of the box!
+
+---
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
