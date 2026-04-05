@@ -39,6 +39,19 @@ This project was built entirely on the frontend to focus on UI/UX, component str
 
 ---
 
+## ✨ Features
+
+- 💼 **Dashboard Overview** – Dynamic summary cards (Total Balance, Income, Expenses) that calculate in real-time based on your transaction history.
+- 📊 **Interactive Visualizations** – Features a time-based cash flow line chart and a categorical pie chart for spending breakdowns.
+- 📝 **Transaction Management** – A robust table allowing users to search, filter (by type), and sort (by date/amount) their transactions.
+- 🎭 **Simulated Role-Based Access (RBAC)** – Switch between `Viewer` (read-only) and `Admin` (can add, edit, delete, and wipe data) to demonstrate UI behavioral changes based on user permissions.
+- 💡 **Automated Insights** – Dynamically calculates your highest spending category, overall savings rate, and total transaction count.
+- 🌙 **Dark/Light Mode** – Full theme support that respects user preference and saves it for their next visit.
+- 🌍 **Dynamic Currency** – Switch between INR (₹), USD ($), and EUR (€) in the settings, instantly updating formatting across the entire app.
+- 📥 **CSV Export** – Download your filtered transaction list directly to your machine as a `.csv` file.
+
+---
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
