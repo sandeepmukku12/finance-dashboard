@@ -68,7 +68,7 @@ export default function TransactionTable({ data }) {
                   key={tx.id}
                   className="border-b hover:bg-gray-50 dark:hover:bg-gray-800"
                 >
-                  <td className="py-2">{tx.date}</td>
+                  <td className="py-2">{new Date(tx.date).toLocaleDateString()}</td>
                   <td>{tx.description}</td>
                   <td>{tx.category}</td>
                   <td>₹ {tx.amount}</td>
