@@ -27,6 +27,18 @@
 
 ---
 
+## 🧰 Tech Stack
+
+This project was built entirely on the frontend to focus on UI/UX, component structuring, and state management without relying on a backend.
+
+- ⚡ **React 18 (Vite)** – Chosen for lightning-fast HMR and an optimized build process.
+- 🎨 **Tailwind CSS** – Used for highly customizable, utility-first styling and seamless Dark Mode implementation.
+- 📊 **Recharts** – A composable charting library used to build the Balance Trend and Spending Breakdown visualizations.
+- 🗄️ **React Context API** – Built-in state management for handling global data (transactions, theme, currency, roles).
+- 💾 **Local Storage** – Used to persist user data and app settings across browser refreshes.
+
+---
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
