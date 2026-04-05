@@ -99,6 +99,19 @@ npm run dev
 
 ---
 
+## 🚀 Usage
+
+Here is a typical flow to test all the features of the dashboard:
+
+- **Explore the Mock Data:** When you first load the app, it populates with mock transactions. Look at how the summary cards, line chart, and pie chart react to this data.
+- **Switch Roles:** Look at the bottom of the sidebar. Change the role from `Viewer` to `Admin`. Notice how "+ Add New", "Edit", and "Delete" buttons suddenly appear on the Transactions table.
+- **Add a Transaction:** (As Admin) Click "+ Add New", fill out the form, and hit save. Watch the charts and summary cards update instantly.
+- **Search and Sort:** Type a category like "Food" into the search bar, or use the dropdowns to sort by "Highest Amount".
+- **Export:** Click the "Export CSV" button to download your current table view.
+- **Change App Settings:** Click "Settings" in the sidebar. Toggle Dark Mode, change the currency to USD ($), or hit "Clear All Data" (if Admin) to see the empty states.
+
+---
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
