@@ -14,3 +14,39 @@ export const expenseData = [
   { name: "Shopping", value: 3000 },
   { name: "Other", value: 2160 },
 ];
+
+
+export const transactions = [
+  {
+    id: 1,
+    date: "2026-04-01",
+    description: "Salary",
+    category: "Income",
+    amount: 50000,
+    type: "income",
+  },
+  {
+    id: 2,
+    date: "2026-04-02",
+    description: "Groceries",
+    category: "Food",
+    amount: 2500,
+    type: "expense",
+  },
+  {
+    id: 3,
+    date: "2026-04-03",
+    description: "Rent",
+    category: "Housing",
+    amount: 15000,
+    type: "expense",
+  },
+  {
+    id: 4,
+    date: "2026-04-04",
+    description: "Freelance",
+    category: "Income",
+    amount: 12000,
+    type: "income",
+  },
+];
