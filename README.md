@@ -1,3 +1,10 @@
+# 💸 NovaFi: Finance Dashboard UI
+
+📊 **NovaFi** is a modern, responsive **Frontend-only web application** built to help users track and understand their financial activity 🤝. It provides a clean interface to **view financial summaries**, **explore transactions**, and **analyze spending patterns** through interactive charts 📈. By leveraging **React Context and Local Storage**, NovaFi delivers a fully persistent and interactive experience entirely in the browser ✨
+
+---
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
