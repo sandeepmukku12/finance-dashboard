@@ -1,4 +1,5 @@
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid } from "recharts";
+import { useApp } from "../context/AppContext";
 
 export default function BalanceChart({ data }) {
   const { currencySymbol } = useApp();

@@ -9,7 +9,7 @@ export default function TransactionTable() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [editingTx, setEditingTx] = useState(null);
   
-  const { role, transactions, addTransaction, updateTransaction, deleteTransaction } = useApp();
+  const { role, transactions, addTransaction, updateTransaction, deleteTransaction, formatCurrency } = useApp();
 
   // Filter and Sort Logic
   const processedData = transactions

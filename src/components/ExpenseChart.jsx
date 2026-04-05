@@ -6,6 +6,7 @@ import {
   ResponsiveContainer,
   Legend,
 } from "recharts";
+import { useApp } from "../context/AppContext";
 
 const COLORS = [
   "#3B82F6",

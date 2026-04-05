@@ -8,8 +8,10 @@ export default function Layout({ children, activeTab, setActiveTab }) {
 
   // Handle system preference and local storage for dark mode
   useEffect(() => {
-    const isDark = localStorage.getItem("theme") === "dark" || 
-      (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches);
+    const isDark =
+      localStorage.getItem("theme") === "dark" ||
+      (!("theme" in localStorage) &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches);
     setDark(isDark);
   }, []);
 
@@ -24,9 +26,9 @@ export default function Layout({ children, activeTab, setActiveTab }) {
   }, [dark]);
 
   const navItems = [
-    { id: 'dashboard', label: 'Dashboard' },
-    { id: 'transactions', label: 'Transactions' },
-    { id: 'settings', label: 'Settings' }
+    { id: "dashboard", label: "Dashboard" },
+    { id: "transactions", label: "Transactions" },
+    { id: "settings", label: "Settings" },
   ];
 
   const handleNavClick = (id) => {
@@ -61,7 +63,15 @@ export default function Layout({ children, activeTab, setActiveTab }) {
             NovaFi
           </h2>
           <p className="text-xs text-gray-500 dark:text-gray-400 mt-1 font-medium tracking-wide">
-            Made by [Name]
+            Made by{" "}
+            <a
+              href="https://github.com/sandeepmukku12"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-bold text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 underline decoration-transparent hover:decoration-blue-600 dark:hover:decoration-blue-400 underline-offset-2"
+            >
+              SANDEEP MUKKU
+            </a>
           </p>
         </div>
 
@@ -100,17 +110,17 @@ export default function Layout({ children, activeTab, setActiveTab }) {
           {/* Dark Mode Slider Toggle */}
           <div className="flex items-center justify-between px-4 py-2.5 bg-gray-100 dark:bg-gray-800 rounded-lg">
             <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
-              {dark ? '🌙 Dark Mode' : '☀️ Light Mode'}
+              {dark ? "🌙 Dark Mode" : "☀️ Light Mode"}
             </span>
             <button
               onClick={() => setDark(!dark)}
               className={`relative inline-flex h-6 w-11 shrink-0 cursor-pointer items-center rounded-full transition-colors duration-300 ease-in-out focus:outline-none ${
-                dark ? 'bg-blue-600' : 'bg-gray-300'
+                dark ? "bg-blue-600" : "bg-gray-300"
               }`}
             >
               <span
                 className={`inline-block h-4 w-4 transform rounded-full bg-white transition duration-300 ease-in-out shadow-sm ${
-                  dark ? 'translate-x-6' : 'translate-x-1'
+                  dark ? "translate-x-6" : "translate-x-1"
                 }`}
               />
             </button>
@@ -141,12 +151,20 @@ export default function Layout({ children, activeTab, setActiveTab }) {
           <div className="flex-1 p-4 md:p-8 w-full max-w-7xl mx-auto">
             {children}
           </div>
-          
+
           {/* FOOTER */}
           <footer className="w-full py-6 mt-auto border-t border-gray-200 dark:border-gray-800 text-center text-sm text-gray-500 dark:text-gray-400 bg-white dark:bg-[#1E293B]">
             <p>© {new Date().getFullYear()} NovaFi. All rights reserved.</p>
             <p className="mt-1">
-              Designed & Developed by <span className="font-semibold text-gray-700 dark:text-gray-300">[Name]</span>
+              Designed & Developed by{" "}
+              <a
+                href="https://github.com/sandeepmukku12"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 underline decoration-transparent hover:decoration-blue-600 dark:hover:decoration-blue-400 underline-offset-4"
+              >
+                SANDEEP MUKKU
+              </a>
             </p>
           </footer>
         </main>
