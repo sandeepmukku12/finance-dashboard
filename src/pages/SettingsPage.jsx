@@ -1,7 +1,7 @@
 import { useApp } from "../context/AppContext";
 
 export default function SettingsPage() {
-  const { role, setTransactions } = useApp();
+  const { role, setTransactions, currency, setCurrency } = useApp();
 
   const handleClearData = () => {
     if (window.confirm("Are you sure you want to delete all transactions? This cannot be undone.")) {
@@ -26,7 +26,8 @@ export default function SettingsPage() {
         <div className="p-6 border-b border-gray-100 dark:border-gray-800">
           <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Profile Information</h2>
           <div className="flex items-center gap-6">
-            <div className="w-20 h-20 rounded-full bg-gradient-to-tr from-blue-500 to-purple-500 flex items-center justify-center text-white text-2xl font-bold shadow-md">
+            {/* Added shrink-0 here to fix the crushed icon! */}
+            <div className="w-20 h-20 shrink-0 rounded-full bg-gradient-to-tr from-blue-500 to-purple-500 flex items-center justify-center text-white text-2xl font-bold shadow-md">
               U
             </div>
             <div className="space-y-3 flex-1">
@@ -44,12 +45,17 @@ export default function SettingsPage() {
           <div className="space-y-4 max-w-md">
             <div>
               <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Currency</label>
-              <select disabled className="w-full px-3 py-2 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-500">
-                <option>INR (₹) - Default</option>
-                <option>USD ($)</option>
-                <option>EUR (€)</option>
+              {/* Made this select dynamic! */}
+              <select 
+                value={currency}
+                onChange={(e) => setCurrency(e.target.value)}
+                className="w-full px-3 py-2 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 outline-none"
+              >
+                <option value="INR">INR (₹)</option>
+                <option value="USD">USD ($)</option>
+                <option value="EUR">EUR (€)</option>
               </select>
-              <p className="text-xs text-gray-500 mt-1">Currency formatting is currently locked for this demo.</p>
+              <p className="text-xs text-gray-500 mt-1">This will update formatting across the dashboard.</p>
             </div>
           </div>
         </div>
