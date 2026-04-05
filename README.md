@@ -8,7 +8,7 @@
 ![Version](https://img.shields.io/badge/Version-1.0.0-blue.svg)
 ![React](https://img.shields.io/badge/React-Vite-blue.svg)
 ![Tailwind](https://img.shields.io/badge/TailwindCSS-v3.0-38B2AC.svg)
-![Author](https://img.shields.io/badge/Author--Sandeep%20Mukku-orange.svg)
+![Author](https://img.shields.io/badge/Author-Sandeep%20Mukku-orange.svg)
 
 ---
 
