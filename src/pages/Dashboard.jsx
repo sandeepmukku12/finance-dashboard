@@ -2,6 +2,8 @@ import SummaryCard from "../components/SummaryCard";
 import BalanceChart from "../components/BalanceChart";
 import ExpenseChart from "../components/ExpenseChart";
 import { balanceData, expenseData } from "../data/mockData";
+import TransactionTable from "../components/TransactionTable";
+import { transactions } from "../data/mockData";
 
 export default function Dashboard() {
   return (
@@ -24,6 +26,9 @@ export default function Dashboard() {
         <ExpenseChart data={expenseData} />
       </div>
 
+
+
+      <TransactionTable data={transactions} />
     </div>
   );
 }
