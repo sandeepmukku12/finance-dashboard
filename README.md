@@ -112,6 +112,28 @@ Here is a typical flow to test all the features of the dashboard:
 
 ---
 
+## 🏗 App Structure
+
+```text
+finance-dashboard/
+│
+├─ public/              # Static assets
+├─ src/
+│  ├─ components/       # Reusable UI parts (Layout, Charts, Table, Modals)
+│  ├─ context/          # AppContext.jsx (Global State & Local Storage sync)
+│  ├─ data/             # mockData.js (Initial payload for first-time users)
+│  ├─ pages/            # Main views (Dashboard, TransactionsPage, SettingsPage)
+│  ├─ App.jsx           # Main component handling simple state-based routing
+│  ├─ main.jsx          # Entry point wrapping the app in Context Providers
+│  └─ index.css         # Tailwind directives and global styles
+│
+├─ tailwind.config.js   # Tailwind configuration and theme colors
+├─ package.json         # Dependencies
+└─ README.md            # Project documentation
+```
+
+---
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
