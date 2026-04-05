@@ -52,6 +52,15 @@ This project was built entirely on the frontend to focus on UI/UX, component str
 
 ---
 
+## 🎨 UI Highlights
+
+- ✨ **Glassmorphism Touches** – Clean, modern overlays on mobile menus and specific insight cards.
+- 📱 **Mobile-First Responsiveness** – The sidebar tucks away into a clean hamburger menu on smaller screens, and charts resize perfectly.
+- 🎛️ **Custom Toggle Switches** – A slider for the Dark Mode toggle.
+- 🚫 **Graceful Empty States** – If you clear all your data, the charts and tables show friendly "No data available" messages instead of breaking.
+
+---
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
