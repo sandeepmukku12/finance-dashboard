@@ -3,18 +3,19 @@ import BalanceChart from "../components/BalanceChart";
 import ExpenseChart from "../components/ExpenseChart";
 import { balanceData, expenseData } from "../data/mockData";
 import TransactionTable from "../components/TransactionTable";
-import { transactions } from "../data/mockData";
+// import { transactions } from "../data/mockData";
 import { useApp } from "../context/AppContext";
 import { transactions as mockTx } from "../data/mockData";
+import { useEffect } from "react";
 
 export default function Dashboard() {
   const { transactions, setTransactions } = useApp();
 
-  useEffect(() => {
-    if (transactions.length === 0) {
-      setTransactions(mockTx);
-    }
-  }, []);
+//   useEffect(() => {
+//     if (transactions.length === 0) {
+//       setTransactions(mockTx);
+//     }
+//   }, []);
 
   return (
     <div className="p-6 space-y-6">
@@ -45,7 +46,7 @@ export default function Dashboard() {
         <ExpenseChart data={expenseData} />
       </div>
 
-      <TransactionTable data={transactions} />
+      <TransactionTable />
     </div>
   );
 }

@@ -1,26 +1,31 @@
 import { useState } from "react";
+import { useApp } from "../context/AppContext";
 
-export default function TransactionTable({ data }) {
+export default function TransactionTable() {
   const [search, setSearch] = useState("");
   const [filter, setFilter] = useState("all");
+  const { role, transactions, setTransactions } = useApp();
 
-  const filteredData = data.filter((tx) => {
+  const filteredData = transactions.filter((tx) => {
     const matchesSearch =
       tx.description.toLowerCase().includes(search.toLowerCase()) ||
       tx.category.toLowerCase().includes(search.toLowerCase());
 
-    const matchesFilter =
-      filter === "all" || tx.type === filter;
+    const matchesFilter = filter === "all" || tx.type === filter;
 
     return matchesSearch && matchesFilter;
   });
 
+  const handleDelete = (id) => {
+    setTransactions(transactions.filter((tx) => tx.id !== id));
+  };
+
+  console.log(transactions);
+
   return (
     <div className="bg-white dark:bg-[#111827] p-5 rounded-xl border border-gray-200 dark:border-gray-800 shadow-sm">
-
       {/* Header */}
       <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4 gap-3">
-        
         <h2 className="text-lg font-semibold text-gray-900 dark:text-white">
           Transactions
         </h2>
@@ -58,6 +63,7 @@ export default function TransactionTable({ data }) {
               <th>Category</th>
               <th>Amount</th>
               <th>Type</th>
+              {role === "admin" && <th>Actions</th>}
             </tr>
           </thead>
 
@@ -68,27 +74,34 @@ export default function TransactionTable({ data }) {
                   key={tx.id}
                   className="border-b hover:bg-gray-50 dark:hover:bg-gray-800"
                 >
-                  <td className="py-2">{new Date(tx.date).toLocaleDateString()}</td>
+                  <td className="py-2">
+                    {new Date(tx.date).toLocaleDateString()}
+                  </td>
                   <td>{tx.description}</td>
                   <td>{tx.category}</td>
                   <td>₹ {tx.amount}</td>
                   <td
                     className={
-                      tx.type === "income"
-                        ? "text-green-500"
-                        : "text-red-500"
+                      tx.type === "income" ? "text-green-500" : "text-red-500"
                     }
                   >
                     {tx.type}
                   </td>
+                  {role === "admin" && (
+                    <td>
+                      <button
+                        onClick={() => handleDelete(tx.id)}
+                        className="text-red-500 text-sm"
+                      >
+                        Delete
+                      </button>
+                    </td>
+                  )}
                 </tr>
               ))
             ) : (
               <tr>
-                <td
-                  colSpan="5"
-                  className="text-center py-4 text-gray-500"
-                >
+                <td colSpan="5" className="text-center py-4 text-gray-500">
                   No transactions found
                 </td>
               </tr>
@@ -96,7 +109,6 @@ export default function TransactionTable({ data }) {
           </tbody>
         </table>
       </div>
-
     </div>
   );
 }

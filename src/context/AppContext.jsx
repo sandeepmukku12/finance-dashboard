@@ -1,4 +1,5 @@
 import { createContext, useContext, useState, useEffect } from "react";
+import { transactions as mockTx } from "../data/mockData";
 
 const AppContext = createContext();
 
@@ -11,8 +12,13 @@ export function AppProvider({ children }) {
     const savedRole = localStorage.getItem("role");
     const savedTx = localStorage.getItem("transactions");
 
-    if (savedRole) setRole(savedRole);
-    if (savedTx) setTransactions(JSON.parse(savedTx));
+    setRole(savedRole || "viewer");
+
+    if (savedTx) {
+      setTransactions(JSON.parse(savedTx));
+    } else {
+      setTransactions(mockTx);
+    }
   }, []);
 
   // Save to localStorage
