@@ -134,6 +134,31 @@ finance-dashboard/
 
 ---
 
+## 🧠 Overview of Approach (State & Architecture)
+
+Since the assignment requested a frontend-focused evaluation without a backend, I designed the architecture to feel as close to a production app as possible using React's built-in tools.
+
+### 1. State Management (Context API)
+Instead of prop-drilling or over-engineering with Redux, I opted for the **React Context API** (`AppContext.jsx`). It serves as a centralized store for:
+- The `transactions` array.
+- The user's active `role` (Admin/Viewer).
+- App preferences (`theme` and `currency`).
+- Helper methods to mutate data (`addTransaction`, `deleteTransaction`).
+
+### 2. Data Persistence
+To make the dashboard feel real, the Context provider uses `useEffect` hooks to synchronize state changes with the browser's **Local Storage**. When you add a transaction or change a theme, it saves instantly. On page reload, it hydrates the state from Local Storage, ensuring a seamless user experience.
+
+### 3. Component Modularity
+I broke the UI down into focused, single-responsibility components. For example:
+- `Dashboard.jsx` handles fetching data from Context and using `useMemo` to derive chart-specific data arrays.
+- `TransactionTable.jsx` is purely responsible for rendering the list, applying local sort/filter logic, and emitting actions.
+- `Layout.jsx` handles the sidebar, mobile overlay, and standardizing the page wrappers.
+
+### 4. Routing
+To keep the application lightweight and focused on UI logic, I implemented a simple state-based routing mechanism in `App.jsx` (`activeTab`) rather than importing a heavy routing library like `react-router-dom`.
+
+---
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
