@@ -65,7 +65,7 @@ This project was built entirely on the frontend to focus on UI/UX, component str
 
 ### Dashboard
 <div align="center">
-  <img alt="Dashboard" src="./screenshots/dashboard.jpg" width="700"/>
+  <img alt="Dashboard" src=".src/screenshots/dashboard.jpg" width="700"/>
 </div>
 
 ### Viewer Dashboard Transactions
