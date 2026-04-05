@@ -66,6 +66,31 @@ This project was built entirely on the frontend to focus on UI/UX, component str
 
 ---
 
+## 📦 Installation & Setup
+
+To get started with **NovaFi** locally, follow these simple steps:
+
+### 1. Clone the repository
+
+   ```bash
+   git clone [https://github.com/sandeepmukku12/finance-dashboard.git](https://github.com/sandeepmukku12/finance-dashboard.git)
+   cd finance-dashboard
+   ```
+### 2. Install Dependencies
+
+Make sure you have Node.js installed, then run:
+
+```bash
+npm install
+```
+
+### 3. Start the Development Server
+
+```bash
+npm run dev
+```
+
+---
 
 # React + Vite
 
