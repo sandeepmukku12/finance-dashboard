@@ -2,7 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Smooth transitions */
+@layer base {
+  html.dark {
+    color-scheme: dark;
+  }
+}
+
 * {
-  transition: all 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 }
