@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { useApp } from "../context/AppContext";
 
 export default function Layout({ children }) {
   const [dark, setDark] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const { role, setRole } = useApp();
 
   return (
     <div className={dark ? "dark" : ""}>
@@ -37,10 +39,26 @@ export default function Layout({ children }) {
           </nav>
 
           {/* Bottom controls */}
-          <div className="absolute bottom-5 left-5 space-y-3">
+          <div className="absolute bottom-5 left-5 space-y-4 w-[85%]">
+            {/* Role Switcher */}
+            <div>
+              <p className="text-xs mb-1 text-gray-500 dark:text-gray-400">
+                Role
+              </p>
+              <select
+                value={role}
+                onChange={(e) => setRole(e.target.value)}
+                className="w-full text-sm px-2 py-1 border rounded bg-transparent dark:border-gray-700"
+              >
+                <option value="viewer">Viewer</option>
+                <option value="admin">Admin</option>
+              </select>
+            </div>
+
+            {/* Dark Mode */}
             <button
               onClick={() => setDark(!dark)}
-              className="text-sm px-3 py-1 bg-gray-200 dark:bg-gray-700 rounded"
+              className="w-full text-sm px-3 py-1 bg-gray-200 dark:bg-gray-700 rounded"
             >
               Toggle Theme
             </button>
