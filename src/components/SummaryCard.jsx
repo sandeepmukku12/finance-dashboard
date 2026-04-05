@@ -1,12 +1,15 @@
 import clsx from "clsx";
+import { useApp } from "../context/AppContext";
 
 export default function SummaryCard({ title, amount, change, isPositive }) {
+  const { formatCurrency } = useApp();
+
   return (
     <div className="bg-white dark:bg-[#1E293B] p-6 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-md transition-shadow">
       <p className="text-sm font-medium text-gray-500 dark:text-gray-400">{title}</p>
       
       <h2 className="text-3xl font-bold mt-2 text-gray-900 dark:text-white">
-        ₹ {amount.toLocaleString()}
+        {formatCurrency(amount)}
       </h2>
 
       {change !== undefined && (

@@ -61,7 +61,7 @@ export default function Layout({ children, activeTab, setActiveTab }) {
             NovaFi
           </h2>
           <p className="text-xs text-gray-500 dark:text-gray-400 mt-1 font-medium tracking-wide">
-            Made by [Your Name]
+            Made by [Name]
           </p>
         </div>
 

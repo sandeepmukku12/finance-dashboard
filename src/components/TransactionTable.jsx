@@ -120,7 +120,7 @@ export default function TransactionTable() {
                   <td className="px-4 py-3">
                     <span className="px-2.5 py-1 bg-gray-100 dark:bg-gray-700 rounded-md text-xs">{tx.category}</span>
                   </td>
-                  <td className="px-4 py-3 font-semibold">₹ {tx.amount.toLocaleString()}</td>
+                  <td className="px-4 py-3 font-semibold">{formatCurrency(tx.amount)}</td>
                   <td className="px-4 py-3">
                     <span className={`flex items-center gap-1.5 ${tx.type === 'income' ? 'text-green-500' : 'text-red-500'}`}>
                       <span className={`w-1.5 h-1.5 rounded-full ${tx.type === 'income' ? 'bg-green-500' : 'bg-red-500'}`}></span>
