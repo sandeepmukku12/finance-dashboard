@@ -159,6 +159,21 @@ To keep the application lightweight and focused on UI logic, I implemented a sim
 
 ---
 
+## 📈 Future Enhancements
+
+If this were to be scaled into a full-stack application, the next steps would be:
+- **Backend API Integration:** Replacing the Context logic with TanStack Query (React Query) to fetch data from a Node/Express backend.
+- **Real Authentication:** Swapping the mock Role-dropdown with real JWT-based authentication (Auth0 or Firebase).
+- **Pagination:** Adding backend pagination to the Transactions table for users with thousands of entries.
+
+---
+
+## ❤️ Built With Love
+
+**NovaFi** was built with ❤️ by **SANDEEP MUKKU** as part of the Frontend Developer Internship assignment. 
+
+Thank you for reviewing my work! 🙌
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
