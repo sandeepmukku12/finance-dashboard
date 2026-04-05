@@ -12,6 +12,21 @@
 
 ---
 
+## 📚 Table of Contents
+
+- [🧰 Tech Stack](#-tech-stack)
+- [✨ Features](#-features)
+- [🎨 UI Highlights](#-ui-highlights)
+- [🖼️ Screenshots](#-screenshots)
+- [📦 Installation & Setup](#-installation--setup)
+- [🚀 Usage](#-usage)
+- [🏗 App Structure](#-app-structure)
+- [🧠 Overview of Approach (State & Architecture)](#-overview-of-approach-state--architecture)
+- [📈 Future Enhancements](#-future-enhancements)
+- [❤️ Built With Love](#-built-with-love)
+
+---
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
